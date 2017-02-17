@@ -2,14 +2,11 @@ permutations=[]
 visited=[]
 one_permu=[]
 def DFS(nums,start_id):
-	global visited
-	global one_permu
-	global permutations
+	global visited,one_permu,permutations
 	if len(one_permu)==len(nums):
-		item=[]
-		for num in one_permu:
-			item.append(num)
-		permutations.append(item)
+		#we can't use 'permutations.append(one_permu), because the value of one_permu will change later, so 
+		#we must append a list of deep copy of one_permu
+		permutations.append(list(one_permu))
 		return
 	for i in range(len(nums)):
 		if i==start_id:
@@ -24,9 +21,7 @@ def DFS(nums,start_id):
 
 class Solution(object):
 	def permute(self, nums):
-		global visited
-		global one_permu
-		global permutations
+		global visited,one_permu,permutations
 		one_permu=[]
 		permutations=[]
 		visited=[False for j in range(len(nums))]
@@ -35,9 +30,9 @@ class Solution(object):
 				visited[j]=False
 			one_permu=[nums[i]]
 			visited[i]=True
-			DFS(nums,i)	
+			DFS(nums,i)
 			visited[i]=False
 			one_permu.pop()
 		return permutations
 s=Solution()
-print s.permute([1])
+print s.permute([1,2,3])
