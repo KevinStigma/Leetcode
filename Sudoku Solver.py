@@ -65,10 +65,6 @@ class Solution(object):
 							
 		self.DFS(0,0,row_visited,col_visited,pala_visited,num_board)
 		print num_board
-		# for i in range(9):
-			# for j in range(9):
-				# if board[i][j]=='.':
-					# board[i][j]=str(num_board[i][j])
 		
 s=Solution()
 s.solveSudoku(["..9748...","7........",".2.1.9...","..7...24.",".64.1.59.",".98...3..","...8.3.2.","........6","...2759.."])
