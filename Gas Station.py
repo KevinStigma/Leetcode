@@ -119,9 +119,7 @@ class Solution(object):
 		if max_value>sum-min_value:
 			return max_list[0]
 		else:
-			return (min_ind+1)%gas_n
-		
-		
+			return (min_ind+1)%gas_n		
 s=Solution()
 print s.canCompleteCircuit4([5],[4])
 			
