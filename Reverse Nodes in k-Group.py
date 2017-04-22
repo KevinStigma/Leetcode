@@ -33,9 +33,9 @@ class Solution(object):
 				ptr=ptr.next
 				if ptr==None:
 					return first.next
-			end=ptr.next
+			next=ptr.next
 			ptr=begin.next
-			while ptr!=end:
+			while ptr!=next:
 				tmp=ptr.next
 				ptr.next=pre.next
 				pre.next=ptr
