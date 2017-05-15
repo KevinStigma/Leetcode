@@ -23,11 +23,3 @@ class Solution:
 				cur_node=cur_node.next
 			pre.right=None
 			begin=begin.left
-				
-				
-			
-			
-			
-		
-		
-		
