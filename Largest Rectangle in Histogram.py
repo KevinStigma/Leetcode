@@ -19,15 +19,3 @@ class Solution(object):
 		return max_area
 s=Solution()
 print s.largestRectangleArea([4,2,0,3,2,5])
-				
-				
-				
-				
-			
-			
-			
-			
-		
-		
-		
-        
