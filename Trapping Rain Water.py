@@ -19,14 +19,3 @@ class Solution(object):
 			
 s=Solution()
 print s.trap([2,0,2])
-				
-				
-			
-			
-			
-			
-			
-			
-		
-		
-		
