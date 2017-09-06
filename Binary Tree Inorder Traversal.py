@@ -10,8 +10,24 @@ class Solution(object):
 		if root!=None:
 			self.inOrder(root.left,list)
 			list.append(root.val)
-			self.inOrder(root.right,list)		
-		
+			self.inOrder(root.right,list)
+	def inOrderNoRecur(self,root):
+		stack=[]
+		list=[]
+		if root==None:
+			return list
+		p=root
+		while(len(stack)!=0 or p!=None):
+			while p!=None:
+				stack.append(p)
+				p=p.left
+			if len(stack):
+				p=stack[-1]
+				stack.pop()
+				list.append(p.val)
+				p=p.right
+		return list
+				
 	def inorderTraversal(self, root):
 		list=[]
 		if root==None:
