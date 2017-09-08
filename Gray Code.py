@@ -19,5 +19,5 @@ class Solution(object):
 		return self.genGrayCode(n)
 		
 s=Solution()
-print s.genGrayCode(2)
+print s.genGrayCode(3)
 		

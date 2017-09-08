@@ -4,8 +4,6 @@ one_permu=[]
 def DFS(nums):
 	global visited,one_permu,permutations
 	if len(one_permu)==len(nums):
-		#we can't use 'permutations.append(one_permu), because the value of one_permu will change later, so 
-		#we must append a list of deep copy of one_permu
 		permutations.append(list(one_permu))
 		return
 	for i in range(len(nums)):
