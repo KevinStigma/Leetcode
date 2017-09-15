@@ -1,24 +1,21 @@
 class Solution(object):
 	def longestValidParentheses(self, s):
-		stack1=[]
-		stack2=[]
+		stack=[]
 		max_length=0
 		for i in range(len(s)):
-			cur_char=s[i]
-			if len(stack1)==0:
-				stack1.append(cur_char)
-				stack2.append(i)
+			if s[i]=='(':
+				stack.append(i)
 			else:
-				if cur_char==')' and stack1[-1]=='(':
-					stack1.pop()
-					stack2.pop()
-					if len(stack2)==0:
-						max_length=max(max_length,i+1)
-					else:
-						max_length=max(max_length,i-stack2[-1])
+				if len(stack)==0 or s[stack[-1]]==')':
+					stack.append(i)
 				else:
-					stack1.append(cur_char)
-					stack2.append(i)
+					stack.pop()
+					length=0
+					if len(stack)==0:
+						length=i+1
+					else:
+						length=i-stack[-1]
+					max_length=max(max_length,length)
 		return max_length
 s=Solution()
 print s.longestValidParentheses("()()")

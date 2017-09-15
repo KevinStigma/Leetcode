@@ -16,4 +16,4 @@ class Solution(object):
 			max_area=max(max_area,(j-i)*cur_h)
 		return max_area
 s=Solution()
-s.maxArea([2,1])
+print s.maxArea([2,1])
